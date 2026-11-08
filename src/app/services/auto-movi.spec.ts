@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AutoMovi } from './auto-movi';
+import { AutoMoviService } from './auto-movi.service';
 
-describe('AutoMovi', () => {
-  let service: AutoMovi;
+describe('AutoMoviService', () => {
+  let service: AutoMoviService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AutoMovi);
+    service = TestBed.inject(AutoMoviService);
   });
 
   it('should be created', () => {
