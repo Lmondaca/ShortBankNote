@@ -1,28 +1,81 @@
+.brand-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+}
+
+.brand-logo {
+  height: 32px;
+  width: auto;
+}
+
+.brand-name {
+  font-family: var(--sbn-font-heading);
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.brand-accent {
+  color: var(--ion-color-tertiary);
+}
+
+ion-content {
+  --background: linear-gradient(180deg, var(--ion-color-secondary) 0%, var(--ion-color-primary-shade) 100%);
+}
 
 .login-wrapper {
-	height: 100%;
-	align-items: center;
-	padding: 15px 16px;
-    background-color: #1B1313;
-    color: #806E6E;
+  min-height: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px 16px calc(24px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.login-wrapper ion-title {
-	width: 100%;
-	max-width: 420px; 
+.hero {
+  text-align: center;
+  color: #ffffff;
 }
 
-.login-wrapper ion-input {
-	width: 100%;
+.hero-img {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto 12px;
+  border-radius: 16px;
 }
 
-
-.login-wrapper ion-title + ion-title {
-	margin-top: 12px;
+h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-h1{
-    color: #806E6E;
-    text-align: center;
+.tagline {
+  margin: 6px 0 0;
+  color: var(--ion-color-tertiary);
+  font-weight: 500;
 }
 
+.login-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 16px;
+  border-radius: 20px;
+  background: var(--ion-background-color, #ffffff);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
