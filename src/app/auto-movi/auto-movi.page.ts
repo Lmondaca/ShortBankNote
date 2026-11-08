@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-auto-movi',
   templateUrl: './auto-movi.page.html',
   styleUrls: ['./auto-movi.page.scss'],
+  standalone: false,
 })
 export class AutoMoviPage implements OnInit {
 

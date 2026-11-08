@@ -40,6 +40,10 @@ const routes: Routes = [
     path: 'resumen',
     loadChildren: () => import('./resumen/resumen.module').then( m => m.ResumenPageModule)
   },
+  {
+    path: 'auto-movi',
+    loadChildren: () => import('./auto-movi/auto-movi.module').then( m => m.AutoMoviPageModule)
+  },
 ];
 
 @NgModule({

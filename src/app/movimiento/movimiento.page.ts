@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-movimiento',
   templateUrl: './movimiento.page.html',
   styleUrls: ['./movimiento.page.scss'],
+  standalone: false,
 })
 export class MovimientoPage implements OnInit {
 
