@@ -29,9 +29,9 @@
 
       <ion-input label="Contraseña" labelPlacement="floating" fill="outline" type="password" placeholder="Ingrese su Contraseña"
         name="contrasena" [(ngModel)]="contrasena" #contrasenaField="ngModel"
-        required maxlength="4" inputmode="numeric" pattern="^[0-9]{4}$"></ion-input>
+        required minlength="9" pattern="^.{9,}$"></ion-input>
       <ion-note color="danger" *ngIf="contrasenaField.invalid && contrasenaField.touched">
-        La contraseña debe ser numérica de 4 dígitos.
+        La contraseña debe tener más de 8 caracteres (cualquier símbolo).
       </ion-note>
 
       <div class="acciones">

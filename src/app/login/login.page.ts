@@ -14,7 +14,7 @@ export class LoginPage implements OnInit {
   contrasena = '';
 
   private readonly usuarioPattern = /^[a-zA-Z0-9]{3,8}$/;
-  private readonly contrasenaPattern = /^[0-9]{4}$/;
+  private readonly contrasenaPattern = /^.{9,}$/;
 
   constructor(
     private router: Router,
