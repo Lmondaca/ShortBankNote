@@ -1,0 +1,7 @@
+{
+  "name": "ShortBankNote",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
