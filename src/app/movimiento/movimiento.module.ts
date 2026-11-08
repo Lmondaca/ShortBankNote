@@ -3,6 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { MovimientoPageRoutingModule } from './movimiento-routing.module';
 
@@ -13,7 +17,11 @@ import { MovimientoPage } from './movimiento.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    MovimientoPageRoutingModule
+    MovimientoPageRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: [MovimientoPage]
 })
