@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UsuarioService } from '../services/usuario.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,32 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private router: Router,
+    private usuarioService: UsuarioService
+  ) {}
 
+  get usuario(): string {
+    return this.usuarioService.usuario;
+  }
+
+  irPerfil() {
+    this.router.navigate(['/perfil']);
+  }
+
+  irMovimiento() {
+    this.router.navigate(['/movimiento']);
+  }
+
+  irMovimientos() {
+    this.router.navigate(['/movimientos']);
+  }
+
+  irAutoMovi() {
+    this.router.navigate(['/auto-movi']);
+  }
+
+  irResumen() {
+    this.router.navigate(['/resumen']);
+  }
 }
