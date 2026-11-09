@@ -1,2 +1,53 @@
-// For information on how to create your own theme, please see:
+// Tema ShortBankNote
+// Paleta inspirada en billetes: verde billete, azul marino y dorado.
 // http://ionicframework.com/docs/theming/
+
+:root {
+  --sbn-font-body: 'Inter', Roboto, 'Helvetica Neue', sans-serif;
+  --sbn-font-heading: 'Poppins', 'Inter', sans-serif;
+
+  --ion-font-family: var(--sbn-font-body);
+
+  /* Verde billete */
+  --ion-color-primary: #0e7c5a;
+  --ion-color-primary-rgb: 14, 124, 90;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #0c6d4f;
+  --ion-color-primary-tint: #268966;
+
+  /* Azul marino */
+  --ion-color-secondary: #0f2a3d;
+  --ion-color-secondary-rgb: 15, 42, 61;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #0d2536;
+  --ion-color-secondary-tint: #273f50;
+
+  /* Dorado */
+  --ion-color-tertiary: #e0a526;
+  --ion-color-tertiary-rgb: 224, 165, 38;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #c59121;
+  --ion-color-tertiary-tint: #e3ae3c;
+
+  /* Barra superior con la marca */
+  --ion-toolbar-background: var(--ion-color-secondary);
+  --ion-toolbar-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Verde más claro para mantener contraste sobre fondo oscuro */
+    --ion-color-primary: #34c38f;
+    --ion-color-primary-rgb: 52, 195, 143;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    --ion-color-primary-shade: #2eac7e;
+    --ion-color-primary-tint: #48c99a;
+
+    --ion-toolbar-background: #0a1c29;
+    --ion-toolbar-color: #ffffff;
+  }
+}

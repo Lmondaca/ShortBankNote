@@ -1,30 +1,45 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-   <div style="text-align: center; background-color: #190D0D;">
-    <img src="assets/img/monke_smile.jpg" alt="Logo" style="  margin: 10px auto; width: 30%; height: 30px;">
-    <img src="assets/img/monke_smile.jpg" alt="Logo" style=" padding-left: 5px; margin: 10px auto; width: 30%; height: 30px;">
-    <img src="assets/img/monke_smile.jpg" alt="Logo" style="padding-left: 5px; margin: 10px auto; width: 30%; height: 30px;">
-  </div>
+    <div class="brand-bar">
+      <img src="assets/img/logo-shortbanknote.svg" alt="Logo de ShortBankNote: billete verde con las iniciales SB en dorado" class="brand-logo">
+      <span class="brand-name">ShortBank<span class="brand-accent">Note</span></span>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
 
-  <div class="login-wrapper ion-text-center">
-    <img src="assets/img/Le_monke.webp" alt="Logo" style="display: block; margin: 20px auto; width: 100px; height: 200px;">
-    <h1>
-      ¡Bienvenido a Le Monke App!
-    </h1>
-    <ion-text class="ion-padding-top">
-      <ion-input label="Nombre de Usuario" labelPlacement="floating" placeholder="Ingrese su usuario"></ion-input>
-    </ion-text>
-    <ion-text class="ion-padding-top">
-      <ion-input label="Contraseña" labelPlacement="floating" type="password" placeholder="Ingrese su Contraseña"></ion-input>
-    </ion-text>
-    <div class="ion-padding-top ">
-      <ion-button color="medium">Inicia sesión</ion-button> <ion-button color="medium" [disabled]="true">Registrar</ion-button>
+  <div class="login-wrapper">
+    <div class="hero">
+      <img
+        src="assets\img\illust-login.jpg"
+        alt="Ilustración de una billetera abierta con billetes y monedas junto a un teléfono que muestra un gráfico de ahorro"
+        class="hero-img" width="320" height="200">
+      <h1>¡Bienvenido a ShortBankNote!</h1>
+      <p class="tagline">Tus cuentas claras, en el bolsillo.</p>
     </div>
-    
+
+    <form #loginForm="ngForm" class="login-card">
+      <ion-input label="Nombre de Usuario" labelPlacement="floating" fill="outline" placeholder="Ingrese su usuario"
+        name="usuario" [(ngModel)]="usuario" #usuarioField="ngModel"
+        required minlength="3" maxlength="8" pattern="^[a-zA-Z0-9]+$"></ion-input>
+      <ion-note color="danger" *ngIf="usuarioField.invalid && usuarioField.touched">
+        El usuario debe ser alfanumérico, entre 3 y 8 caracteres.
+      </ion-note>
+
+      <ion-input label="Contraseña" labelPlacement="floating" fill="outline" type="password" placeholder="Ingrese su Contraseña"
+        name="contrasena" [(ngModel)]="contrasena" #contrasenaField="ngModel"
+        required minlength="9" pattern="^.{9,}$"></ion-input>
+      <ion-note color="danger" *ngIf="contrasenaField.invalid && contrasenaField.touched">
+        La contraseña debe tener más de 8 caracteres (cualquier símbolo).
+      </ion-note>
+
+      <div class="acciones">
+        <ion-button expand="block" color="primary" [disabled]="loginForm.invalid" (click)="ingresar()">Iniciar Sesión</ion-button>
+        <ion-button expand="block" fill="outline" color="primary" (click)="irRegistro()">Registrar</ion-button>
+      </div>
+    </form>
+
   </div>
-  
+
 </ion-content>
